@@ -1,0 +1,35 @@
+/* pages/launch/launch.wxss */
+.container{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.cover{
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+}
+.top,
+.bottom{
+  position: absolute;
+  z-index: 2;
+  flex: 1;
+  display: flex;
+  justify-content: space-around;
+  color: white;
+  left:0;
+  right: 0;
+}
+.top{
+  font-size: 52rpx;
+  font-weight: 300;
+  margin-top: 132rpx;
+  top: 50%;
+}
+.bottom{
+  font-size: 27rpx;
+  font-weight: 200;
+   bottom: 35rpx;
+}

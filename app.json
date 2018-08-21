@@ -1,0 +1,53 @@
+{
+  "pages": [
+    "pages/launch/launch",
+    "pages/feature/feature",
+    "pages/index/index",
+    "pages/publish/publish",
+    "pages/account/account",
+    "pages/search/search",
+    "pages/message/message"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#33B7ED",
+    "navigationBarTitleText": "",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#abb4bf",
+    "backgroundColor": "#fff",
+    "list": [
+      {
+        "pagePath": "pages/feature/feature",
+        "text": "阅读",
+        "iconPath": "img/tabbar/tab_icon_featured_25x25_@2x.png",
+        "selectedIconPath": "img/tabbar/tab_icon_featured_selected_25x25_@2x.png"
+      },
+      {
+        "pagePath": "pages/message/message",
+        "text": "消息",
+        "iconPath": "img/tabbar/tab_icon_message_25x25_@2x.png",
+        "selectedIconPath": "img/tabbar/tab_icon_message_selected_25x25_@2x.png"
+      },
+      {
+        "pagePath": "pages/publish/publish",
+        "text": "",
+        "iconPath": "img/tabbar/tab_icon_featured_25x25_@2x.png",
+        "selectedIconPath": "img/tabbar/tab_icon_featured_selected_25x25_@2x.png"
+      },
+      {
+        "pagePath": "pages/search/search",
+        "text": "发现",
+        "iconPath": "img/tabbar/tab_icon_search_25x25_@2x.png",
+        "selectedIconPath": "img/tabbar/tab_icon_search_selected_27x27_@2x.png"
+      },
+      {
+        "pagePath": "pages/account/account",
+        "text": "我的",
+        "iconPath": "img/tabbar/tab_icon_account_25x25_@2x.png",
+        "selectedIconPath": "img/tabbar/tab_icon_account_selected_25x25_@2x.png"
+      }
+    ]
+  }
+}

@@ -1,0 +1,5 @@
+<!-- <view class='container'> -->
+<image class='cover' src='/img/launch/LaunchImage-568h@2x.png'></image>
+<view class='top'>开发者头条</view>
+<view class='bottom'>Copyright ©️ 2014-2018 Wing.All Rights Reserved.</view>
+<!-- </view> -->
