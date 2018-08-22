@@ -10,7 +10,7 @@ Page({
     let auth = util.isLogined
     let url = '/pages/feature/feature'
     if(auth){
-      url = 'pages/feature/subscribe'
+      // url = 'pages/subscribe/subscribe'
     }
     wx.switchTab({
       url,

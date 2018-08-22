@@ -7,6 +7,7 @@ Page({
    */
   data: {
     bannerImgList:[],
+    choiceArticlesList:[],
     swiperHeight:'auto',
     list:[],
     COUNT:20,
@@ -26,14 +27,13 @@ Page({
   onReady: function () {
   
   },
-
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function () {
-    if(util.pageReload){
-      this.init()
-    }
+   onShow () {
+     if(util.pageReload(this.data.auth,[this.data.list]) || !this.data.scrollTop){
+       this.init()
+     }
   },
   init(){
     wx.showLoading({
@@ -42,36 +42,76 @@ Page({
     this.setData({
       aauth:{},
     })
-    let auth = util.isLogined
+    let auth = util.isLogined()
     this.setData({
       auth,
     })
     this.initSwiper()
     this.getBannerImgList()
-    this.getEntryByList(true)
+    this.getChoiceArticlesList()
   },
-  initSwiper(){
+  initSwiper() {
     wx.getSystemInfo({
       success:(res) => {
         this.setData({
-          swiperHeight:`${(res.windowWidth || res.screenWidth) / 108 * 36}px`
+          swiperHeight:`${(res.windowWidth || res.screenWidth) / 54 * 36}px`
         })
       },
     })
   },
   getBannerImgList (){
-    wx.getStorage({
-      key: 'bannerImgList',
+    const auth = this.data.auth
+    wx.request({
+      url: 'https://api.toutiao.io/v2/banner',
+      data : {
+        app_key:'nid5puvc9t0v7hltuy1u',
+        signature:'27a1fbc066c049039c3f9c2ba1ac83e449afe007',
+        timestamp:'1534942678',
+
+      },
       success: (res) => {
+        let data = res.data
+        if(data.errcode === 0){
+          this.setData({
+          bannerImgList: data.data
+          })
+        }else{
+          wx.showToast({
+            title: data.msg,
+            icon: 'none'
+          })
+        }
+      },
+      fail :() => {
+        wx.showToast({
+          title:'页面被外星人调包了，请刷新重试',
+          icon:'none'
+        })
+      }
+    })
+  },
+  getChoiceArticlesList(){
+    wx.request({
+      url: 'https://api.toutiao.io/v2/dailies/latest',
+      data: {
+        app_key: 'nid5puvc9t0v7hltuy1u',
+        signature: '934de461c00168dd420830f8c9c3c20511993676',
+        timestamp: '1534945755',
+        token:'171976fa8adb1af4c22'
+      },
+      success: (res) => {
+
+        wx.hideLoading()
         this.setData({
-          bannerImgList:res.data || []
+          choiceArticlesList: res.data
         })
       },
-      fail: (res) => {
-        this.setData({
-          bannerImgList:[],
+      fail: () => {
+        wx.showToast({
+          title: '页面被外星人调包了，请刷新重试',
+          icon: 'none'
         })
-      },
+      }
     })
   },
 

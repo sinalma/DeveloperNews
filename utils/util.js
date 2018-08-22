@@ -6,6 +6,13 @@ let isLogined = () => {
   return false
 }
 
+let isEmptyObject = (obj) => {
+  for (let i in obj){
+    return false;
+  }
+  return true
+}
+
 let pageReload = (scopeAuth,dataList) => {
   let auth = isLogined
   let dataEmpty = (list) => {
@@ -25,8 +32,8 @@ let pageReload = (scopeAuth,dataList) => {
   }
 }
 
-
 const formatTime = date => {
+  return 1
   const year = date.getFullYear()
   const month = date.getMonth() + 1
   const day = date.getDate()
@@ -43,5 +50,7 @@ const formatNumber = n => {
 }
 
 module.exports = {
-  formatTime: formatTime
+  formatTime,
+  isLogined,
+  pageReload,
 }
