@@ -9,6 +9,7 @@ Page({
     bannerImgList:[],
     choiceArticlesList:[],
     swiperHeight:'auto',
+    swiperTitleHeight:'auto',
     list:[],
     COUNT:20,
     auth:{},
@@ -54,7 +55,8 @@ Page({
     wx.getSystemInfo({
       success:(res) => {
         this.setData({
-          swiperHeight:`${(res.windowWidth || res.screenWidth) / 54 * 36}px`
+          swiperHeight: `${(res.windowWidth || res.screenWidth) * 0.5625 + 5}px`,
+          swiperTitleHeight: `${(res.windowWidth || res.screenWidth) * 0.5625 * 0.8}px`
         })
       },
     })
@@ -100,11 +102,19 @@ Page({
         token:'171976fa8adb1af4c22'
       },
       success: (res) => {
-
-        wx.hideLoading()
-        this.setData({
-          choiceArticlesList: res.data
-        })
+        let data = res.data
+        console.log(data.data.article)
+        if (data.errcode === 0) {
+          wx.hideLoading()
+          this.setData({
+            choiceArticlesList:data.data.article
+          })
+        } else {
+          wx.showToast({
+            title: data.msg,
+            icon: 'none'
+          })
+        }
       },
       fail: () => {
         wx.showToast({

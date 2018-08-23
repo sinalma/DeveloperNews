@@ -1,2 +1,22 @@
-<!--components/choiceItem/choiceItem.wxml-->
-<text>components/choiceItem/choiceItem.wxml</text>
+<view class='placeholder'></view>
+<view class="item" wx:for="{{list}}" wx:key='{{index}}'  data-item='{{item}}'>
+  <view class="title">{{item.title}}</view>
+  <view class="info">
+      <view class="i">
+        <image src=""></image>
+        <text>{{item.like_count}}</text>
+      </view>
+      <view class="i">
+        <image src=""></image>
+        <text>{{item.comment_count}}</text>
+      </view>
+      <view class="i">
+        <image src=""></image>
+        <text>{{item.favorite_count}}</text>
+      </view>
+      <text>{{item.subject.name}}</text>
+    </view>
+    <!-- <view class='author'> -->
+          <image src='{{item.subject.image}}'></image>
+    <!-- </view> -->
+</view>

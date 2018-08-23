@@ -1,14 +1,14 @@
 <view class="container">
-  <swiper autoplay circular interval='3500' duration='500' style='height:{{swiperHeight}}' wx:if='{{bannerImgList.length}}' >
+  <swiper autoplay circular indicator-dots indicator-active-color="#33B7ED" interval='3500' duration='500' style='height:{{swiperHeight}}' wx:if='{{bannerImgList.length}}' >
   <!-- style='height:{{swiperHeight}}' -->
     <block wx:for="{{bannerImgList}}" wx:key="{{index}}">
       <swiper-item>
         <image src='{{item.image}}' class='banner' mode='widthFix'></image>
-        <view class='title' style="top:{{swiperHeight}}">{{item.title}}</view>
+        <view class='title' style="top:{{swiperTitleHeight}}">{{item.title}}</view>
       </swiper-item>
     </block>
   </swiper>
-  <view class='article'>
-    <choiceArticles list="{{list}}" graphics="{{false}}"></choiceArticles>
+  <view class='articles'>
+    <choiceItem list='{{choiceArticlesList}}' graphics='{{false}}'></choiceItem>
   </view>
 </view>
