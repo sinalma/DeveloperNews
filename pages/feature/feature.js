@@ -93,13 +93,13 @@ Page({
     })
   },
   getChoiceArticlesList(){
+    let timestamp = Date.parse(new Date()) / 1000 + 500
     wx.request({
       url: 'https://api.toutiao.io/v2/dailies/latest',
       data: {
         app_key: 'nid5puvc9t0v7hltuy1u',
         signature: '934de461c00168dd420830f8c9c3c20511993676',
-        timestamp: '1534945755',
-        token:'171976fa8adb1af4c22'
+        timestamp: '1535040492'
       },
       success: (res) => {
         let data = res.data

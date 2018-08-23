@@ -1,22 +1,22 @@
-<view class='placeholder'></view>
-<view class="item" wx:for="{{list}}" wx:key='{{index}}'  data-item='{{item}}'>
-  <view class="title">{{item.title}}</view>
+
+<view class="item" wx:for="{{list}}" wx:key='{{index}}'  data-item='{{item}}' catchtap='toPostDetail'>
+  <view class='top'>
+    <view class="title">{{item.title}}</view>
+    <image src='{{item.subject.image}}'></image>
+  </view>
   <view class="info">
       <view class="i">
-        <image src=""></image>
+        <image src="../../img/choice/btn_icon_bar_like_20x20_@2x.png"></image>
         <text>{{item.like_count}}</text>
       </view>
       <view class="i">
-        <image src=""></image>
+        <image src="../../img/choice/btn_icon_bar_comment_gray_20x20_@1x.png"></image>
         <text>{{item.comment_count}}</text>
       </view>
       <view class="i">
-        <image src=""></image>
+        <image src="../../img/choice/btn_icon_bar_favorite_20x20_@1x.png"></image>
         <text>{{item.favorite_count}}</text>
       </view>
-      <text>{{item.subject.name}}</text>
+      <text class='name'>{{item.subject.name}}</text>
     </view>
-    <!-- <view class='author'> -->
-          <image src='{{item.subject.image}}'></image>
-    <!-- </view> -->
 </view>

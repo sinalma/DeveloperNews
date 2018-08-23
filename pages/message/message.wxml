@@ -1,2 +1,6 @@
-<!--pages/message/message.wxml-->
-<text>pages/message/message.wxml</text>
+<view class="container">
+  <view class='remain'>
+    <text>登录后可以接收关注、评论、订阅等提醒，还可以与人聊天</text>
+    <button class='login'>我要登录</button>
+  </view>
+</view>

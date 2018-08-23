@@ -6,7 +6,8 @@
     "pages/publish/publish",
     "pages/account/account",
     "pages/search/search",
-    "pages/message/message"
+    "pages/message/message",
+    "pages/post/post"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -15,7 +16,7 @@
     "navigationBarTextStyle": "white"
   },
   "tabBar": {
-    "color": "#abb4bf",
+    "color": "",
     "backgroundColor": "#fff",
     "list": [
       {
@@ -33,8 +34,8 @@
       {
         "pagePath": "pages/publish/publish",
         "text": "",
-        "iconPath": "img/tabbar/tab_icon_featured_25x25_@2x.png",
-        "selectedIconPath": "img/tabbar/tab_icon_featured_selected_25x25_@2x.png"
+        "iconPath": "img/tabbar/tabbar_compose_button_64x44_@2x.png",
+        "selectedIconPath": "img/tabbar/tabbar_compose_button_highlighted_64x44_@2x.png"
       },
       {
         "pagePath": "pages/search/search",

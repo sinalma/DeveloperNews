@@ -32,6 +32,18 @@ let pageReload = (scopeAuth,dataList) => {
   }
 }
 
+let toPostDetail = (e) => {
+  let item = e.currentTarget.dataset.item
+  
+  // 从原文站点读取文章
+
+  // 从开发者头条后台读取文章
+  let url = `/pages/post/post?id=${item.id}`
+  wx.navigateTo({
+    url:url
+  })
+}
+
 const formatTime = date => {
   return 1
   const year = date.getFullYear()
@@ -52,5 +64,6 @@ const formatNumber = n => {
 module.exports = {
   formatTime,
   isLogined,
-  pageReload,
+  pageReload, 
+  toPostDetail,
 }

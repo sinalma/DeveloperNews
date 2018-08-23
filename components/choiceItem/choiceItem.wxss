@@ -1,45 +1,53 @@
-/* components/choiceItem/choiceItem.wxss */
-.placeholder{
-  height: 105px;
-}
 .item{
   height: 100px;
   width: 100%;
-  padding: 15px;
+  padding: 10px;
   background: #fff;
   border-bottom: 1px solid #abb4bf;
   box-sizing: border-box;
   position: relative;
+  top: 0;
+  left: 0;
+}
+.top{
+  display: block;
+}
+.top .title{
+  float: left;
+}
+.top image{
+  float: right;
+  display: inline-block;
+  width:40px;
+  height: 40px;
+  margin-top: 10px; 
 }
 .title{
   color:#333;
   font-size: 15px;
 }
 .info{
+  position: absolute;
+  bottom: 10px;
+  left: 0px;
+  font-size: 14px;
   height: 20px;
   width: 100%;
+  padding-left: 10px;
+  padding-right: 10px;
+  box-sizing: border-box;
+  color: #abb4bf;
 }
-.info{
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  font-size: 12px;
-}
-.info view{
-  float: left;
-}
-.info text{
-  float: right;
-}
-.author{
-  width:50px;
-  height: 50px; 
-  position: absolute;
-  right: 30px;
-  top: 10px;
-}
-.author img{
+.info .i{
   display: inline-block;
-  width:50px;
-  height: 50px; 
+  float: left;
+  margin-right: 10px;
+}
+.info .i image{
+  width: 15px;
+  height: 15px;
+  margin-right: 3px;
+}
+.info .name{
+  float: right;
 }

@@ -1,13 +1,7 @@
 .container{
-position: relative;
-top: 0;
-left: 0;
 }
 swiper{
   width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
 }
 .banner{
   width: 100%;

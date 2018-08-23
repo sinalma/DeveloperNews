@@ -1,4 +1,4 @@
-// components/choiceItem/choiceItem.js
+let util = require('../../utils/util.js')
 Component({
   /**
    * 组件的属性列表
@@ -22,6 +22,8 @@ Component({
    * 组件的方法列表
    */
   methods: {
-
+    toPostDetail(e){
+      util.toPostDetail(e)
+    }
   }
 })
