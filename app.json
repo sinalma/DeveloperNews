@@ -7,7 +7,8 @@
     "pages/account/account",
     "pages/search/search",
     "pages/message/message",
-    "pages/post/post"
+    "pages/post/post",
+    "pages/login/login"
   ],
   "window": {
     "backgroundTextStyle": "light",

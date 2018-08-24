@@ -1,4 +1,4 @@
-// pages/message/message.js
+// pages/login/login.js
 Page({
 
   /**
@@ -41,11 +41,6 @@ Page({
    */
   onUnload: function () {
   
-  },
-  login:function(){
-    wx.navigateTo({
-      url: '/pages/login/login',
-    })
   },
 
   /**

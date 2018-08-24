@@ -1,0 +1,48 @@
+<view class="wrapper">
+  <view class='menu'>
+    <view class='btn-grp'>
+      <button>验证码登录</button>
+      <view class='line'></view>
+    </view>
+    <view class='btn-grp'>
+      <button>密码登录</button>
+      <view class='line'></view>
+    </view>
+  </view>
+  <view class='main'>
+    <form class='form' bindsubmit='commit'>
+      <view class='input-grp'>
+        <input name='phone' placeholder='请输入手机号' maxlength='11' focus></input>
+      </view>
+      <view class='input-grp'>
+        <input password='true' name='password' placeholder='请输入验证码'></input>
+        <button>获取验证码</button>
+      </view>
+      <view class='input-grp'>
+        <button class='login' formType='submit'>登录</button>
+      </view>
+    </form>
+  </view>
+  <view class='footer'>
+    <view class='foot-line'>
+      <text>其他方式登录</text>
+    </view>
+    <view class='links'>
+      <button>
+        <icon></icon>
+      </button>
+      <button>
+        <icon></icon>
+      </button>
+      <button>
+        <icon></icon>
+      </button>
+      <button>
+        <icon></icon>
+      </button>
+      <button>
+        <icon></icon>
+      </button>
+    </view>
+  </view>
+</view>
