@@ -65,19 +65,26 @@
   bottom: 10px;
   left: 10px;
   width: 100%;
+  text-align: center;
+  border-top: 1px solid #ccc;
+  /* padding: 20px; */
 }
-.footer .foot-line{
-  background-color: #ccc;
-  height: 1px;
-  width:100%；
+.footer text{
+  position: absolute;
+  top: -10px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  font-size: 12px;
+  width: 100px;
+  background-color: white;
 }
-.footer button{
+.footer .links{
+  margin-top: 20px;
+  text-align: center;
+}
+.footer image{
   width: 20px;
   height: 20px;
-  float: left;
-}
-.footer icon{
-  width: 20px;
-  height: 20px;
-
+  margin-right: 30px;
 }
