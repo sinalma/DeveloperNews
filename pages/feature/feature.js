@@ -98,8 +98,8 @@ Page({
       url: 'https://api.toutiao.io/v2/dailies/latest',
       data: {
         app_key: 'nid5puvc9t0v7hltuy1u',
-        signature: '27a1fbc066c049039c3f9c2ba1ac83e449afe007',
-        timestamp: '1534942678'
+        signature: 'a6f57b419dcf6f0c9c8f723c664c60b2414df2b4',
+        timestamp: '1535118202'
       },
       success: (res) => {
         let data = res.data

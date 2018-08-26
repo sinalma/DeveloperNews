@@ -33,7 +33,7 @@ Page({
     })
     let aid = query.id 
     this.getArticleInfo(aid)
-    this.getArticleContent(aid)
+    this.getArticleContent(aid) 
   },
   // 获取文章信息（用户是否赞过，是否收藏），详情
   getArticleInfo(aid){
@@ -43,8 +43,8 @@ Page({
       url: `https://api.toutiao.io/v2/articles/${aid}/info`,
       data: {
         app_key: 'nid5puvc9t0v7hltuy1u',
-        signature: '9fa182970f792f71da230c5b3de7ea8abaff2711',
-        timestamp: `${timestamp}`
+        signature: 'f1bb7809675243fd9b37150b7ee0f2c503182a0c',
+        timestamp: '1535121671'
       },
       success:(res) => {
         console.log(res)
@@ -68,13 +68,17 @@ Page({
     })
   },
   getArticleContent(aid){
+    wx.navigateTo({
+      url: 'https://toutiao.io/k/lf0798',
+    })
+    return;
     let timestamp = Date.parse(new Date()) / 1000
     wx.request({
-      url: `https://api.toutiao.io/v2/articles/${aid}`,
+      url: `https://toutiao.io/k/lf0798`,
       data:({
-        app_key:'nid5puvc9t0v7hltuy1u',
-        signature:'9fa182970f792f71da230c5b3de7ea8abaff2711',
-        timestamp:`${timestamp}`
+        // app_key:'nid5puvc9t0v7hltuy1u',
+        // signature:'3ab98551301580baa667aba0661fd4fe396a0a40',
+        // timestamp:'1535118981',
       }),
       success:(res) => {
         console.log(res)
